@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="../resource/css/pop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<script src="../resource/js/jquery.js"></script>
+	<script src="../resource/js/pop.js"></script>
+	<script>
+		$('body').popup({
+			title:'提示',
+			message:'小仙女好看吗？',
+			popClass:'tc',
+			okText:'再看看',//确定文本
+			cancelText:'不看了',
+			onOk:function(){
+				console.log('aaa');
+			}
+		})
+	</script>
+</body>
+</html>

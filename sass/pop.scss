@@ -1,0 +1,92 @@
+#pop-mask{
+    display:block;  
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    z-index:99;
+    position:fixed;
+    top:0;
+    left:0;
+}
+.default-pop{
+    display: block;
+    margin: 0px auto;
+    position:fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width:90%;
+    padding: 0;
+    opacity: 1;
+    background: #fff;
+    color:#555;
+    border-radius:0.8rem;
+    -webkit-transform: scale(0.5, 0.5);
+    -webkit-transition: all  0.20s  ease-in-out;
+    transform:scale(0.5, 0.5);
+    transition: all 0.20s  ease-in-out;
+    opacity: 0;
+    z-index: 100;
+    &.show{
+        opacity: 1;
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+    }
+    &.tc{
+        .pop-content{
+            text-align: center;
+        }
+    }
+    header{
+        margin:0;
+        padding:1.2rem 0;
+        text-align: center;
+        color: #333;
+        height:2rem;
+        line-height:2rem;
+        font-size: 1.7rem;
+        border-top-left-radius:0.8rem;
+        border-top-right-radius:0.8rem;
+        background:#fff;
+    }
+    .pop-content{
+        font-size:1.5rem;
+        margin:2rem 1rem;
+        line-height:180%;
+        max-height: 20rem;
+        overflow-y: auto;
+        color: #666;
+    }
+    &>footer{
+         width:100%;
+         text-align:center;
+         display:block !important;
+         border-top:1px solid #ccc;
+         overflow: hidden;
+         background: transparent;
+         border-bottom-right-radius: 0.8rem;
+         border-bottom-left-radius: 0.8rem;
+         &>span{
+            float:left;
+            padding:1rem 0;
+            width: 50%;
+            color:#999;
+            box-sizing: border-box;
+            line-height:3rem;
+            font-size:1.7rem;
+            background: #f7f7f7;
+            border-right: 1px solid #D5D7D6;
+            &.center{
+                float:none!important;
+                width:100%;
+                margin:auto;
+                display: block;
+            }
+         }
+         .pop-ok{
+            float:right;
+            border-right: none;
+            color:#3381E3;
+        }
+    }
+}
